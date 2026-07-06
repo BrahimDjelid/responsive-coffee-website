@@ -94,6 +94,32 @@ img {
   width: 100%;
 }
 
+.section-title {
+  text-align: center;
+  padding: 60px 0 120px;
+  text-transform: uppercase;
+  font-size: var(--font-size-l);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 80px;
+  height: 5px;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-s);
+}
+
+@media screen and (max-width: 767px) {
+  .section-title {
+    font-size: var(--font-size-m);
+  }
+
+  .section-title::after {
+    height: 4px;
+  }
+}
 /* Navbar */
 
 /* Fixed header bar */
@@ -341,5 +367,85 @@ header {
     max-width: 250px;
     order: -1; /* move image above the text on mobile */
     margin: 20px 0 25px;
+  }
+}
+
+/* About section */
+.about {
+  padding: 120px 0;
+  background: var(--light-pink-color);
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.about .about-image-wrapper .about-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius-circle);
+}
+
+.about .about-details {
+  text-align: center;
+  max-width: 50%;
+}
+
+.about .about-details .section-title {
+  padding: 0;
+}
+
+.about .about-details .text {
+  line-height: 1.8;
+  font-size: var(--font-size-m);
+  margin: 50px 0 30px;
+}
+
+.about .social-link-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.about .social-link-list .social-link {
+  color: var(--primary-color);
+  font-size: var(--font-size-l);
+  transition: color 0.2s ease;
+}
+
+.about .social-link-list .social-link:hover {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 992px) {
+  .about .container {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .about .about-image-wrapper .about-image {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  .about .about-details {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about .about-details .text {
+    font-size: var(--font-size-s);
+  }
+
+  .about .social-link-list .social-link {
+    font-size: var(--font-size-m);
   }
 }
