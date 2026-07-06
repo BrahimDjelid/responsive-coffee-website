@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Website</title>
 
+    <!-- Swiper link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <!-- Global stylesheet -->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -39,7 +45,7 @@
             </div>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="#hero" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="#about" class="nav-link">About</a>
@@ -48,7 +54,7 @@
               <a href="#menu" class="nav-link">Menu</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Testimonials</a>
+              <a href="#testimonials" class="nav-link">Testimonials</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Gallery</a>
@@ -194,11 +200,73 @@
             <h3 class="name">Burger &amp; Frenchfries</h3>
             <p class="text">Quick bites to satisfy your small size hunger.</p>
           </div>
-          
         </div>
       </div>
     </section>
+
+    <!-- Testimonials section -->
+    <section class="testimonials" id="testimonials">
+      <h2 class="section-title">testimonials</h2>
+      <div class="container">
+        <div class="slider-container swiper">
+          <div class="slider-wrapper">
+            <ul class="testimonials-list swiper-wrapper">
+              <li class="testimonial swiper-slide">
+                <img src="images/user-1.jpg" alt="User" class="user-image" />
+                <h3 class="name">Sarah Johnson</h3>
+                <i class="feedback"
+                  >Loved the French roast. Perfectly balanced and rich. Will
+                  order again!</i
+                >
+              </li>
+
+              <li class="testimonial swiper-slide">
+                <img src="images/user-2.jpg" alt="User" class="user-image" />
+                <h3 class="name">Michael Chen</h3>
+                <i class="feedback"
+                  >The cold brew is absolutely refreshing! Best I've had in
+                  town.</i
+                >
+              </li>
+
+              <li class="testimonial swiper-slide">
+                <img src="images/user-3.jpg" alt="User" class="user-image" />
+                <h3 class="name">Emily Rodriguez</h3>
+                <i class="feedback"
+                  >Their caramel macchiato is pure perfection. Cozy atmosphere
+                  too!</i
+                >
+              </li>
+
+              <li class="testimonial swiper-slide">
+                <img src="images/user-4.jpg" alt="User" class="user-image" />
+                <h3 class="name">Jessica Williams</h3>
+                <i class="feedback"
+                  >The vanilla latte with oat milk is my go-to. Smooth and
+                  delicious!</i
+                >
+              </li>
+
+              <li class="testimonial swiper-slide">
+                <img src="images/user-5.jpg" alt="User" class="user-image" />
+                <h3 class="name">David Kim</h3>
+                <i class="feedback"
+                  >Amazing espresso shots. The baristas really know their
+                  craft!</i
+                >
+              </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
