@@ -424,7 +424,7 @@ header {
 
 @media screen and (max-width: 992px) {
   .about .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 70px;
   }
 
@@ -511,6 +511,7 @@ header {
 }
 
 .testimonials .testimonial {
+  user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -692,5 +693,48 @@ header {
 
   .contact .contact-info-list .contact-info i {
     font-size: var(--font-size-s);
+  }
+}
+
+/* Footer section */
+footer {
+  padding: 20px 0;
+  background: var(--dark-color);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer :where(.copyright-text, .social-link, .policy-link) {
+  color: var(--white-color);
+  transition: 0.2s ease;
+}
+
+footer .social-link-list {
+  display: flex;
+  gap: 25px;
+}
+
+footer .social-link-list .social-link {
+  font-size: var(--font-size-m);
+}
+
+footer .social-link-list .social-link:hover,
+footer .policy-text .policy-link:hover {
+  color: var(--secondary-color);
+}
+
+footer .policy-text .separator {
+  color: var(--white-color);
+  margin: 0 5px;
+}
+
+@media screen and (max-width:767px) {
+  footer .container {
+    flex-direction: column;
+    gap: 20px;
   }
 }
