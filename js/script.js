@@ -16,6 +16,15 @@ closeMenu.addEventListener("click", () => {
   header.classList.remove("menu-open");
 });
 
+// Hide mobile menu on click
+const links = document.querySelectorAll(".nav-menu .nav-link");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    header.classList.remove("menu-open");
+  });
+});
+
 // Initialize Swiper
 const swiper = new Swiper(".slider-wrapper", {
   loop: true,
